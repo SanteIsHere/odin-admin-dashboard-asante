@@ -1,30 +1,78 @@
+:root {
+    --nav-color: red;
+}
+
 body {
+    margin: 0;
+    padding: 0;
 }
 
 #container {
     display: grid;
     grid-template: 1fr 3fr / 1fr 3fr;
-    grid-template-areas: "left-nav top-nav"
-    "left-nav main-content";
+    grid-template-areas: "nav head"
+    "nav dash";
 }
 
-#left-nav {
-    background-color: lightskyblue;
-    grid-area: left-nav;
+#nav {
+    background-color: var(--nav-color);
+    grid-area: nav;
+    display: flex;
+    padding: 0px 0px 150px 30px;
+    flex-direction: column;
+    gap: 10px;
+    /* grid-template-rows: repeat(3, 1fr); */
+}
+
+#nav * {
+    color: white;
+}
+
+#nav h2, #nav h3 {
+    display: flex;
+    gap: 5px;
+}
+
+#head {
+    grid-area: head;
     display: grid;
-    gap: 100px;
-    padding: 10px;
-    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+    border: 1px solid black;
+    padding: 5px 20px;
+    grid-template: 1fr 2fr / repeat(2, 1fr);
+    gap: 30px;
+    grid-template-areas: "tl tr"
+    "bl br";
 }
 
-#left-nav * {
-    color: white
+#search {
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.404);
+    background-color: rgb(218, 212, 212);
 }
 
-#top-nav {
-    grid-area: top-nav;
+#tl {
+    grid-area: tl
 }
 
-#main-content {
-    grid-area: main-content;
+#tr {
+    grid-area: tr;
+}
+
+#bl {
+    grid-area: bl;
+}
+
+#br {
+    grid-area: br;
+}
+
+.info {
+    display: flex;
+    gap: 5px;
+}
+
+#dash {
+    grid-area: dash;
+    display: grid;
+    grid-template: repeat(2, 1fr) / 2fr 1fr;
 }
