@@ -21,6 +21,7 @@ body {
     padding: 0px 0px 150px 30px;
     flex-direction: column;
     gap: 10px;
+    height: 100%;
     /* grid-template-rows: repeat(3, 1fr); */
 }
 
@@ -36,18 +37,20 @@ body {
 #head {
     grid-area: head;
     display: grid;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding: 5px 20px;
-    grid-template: 1fr 2fr / repeat(2, 1fr);
+    grid-template: repeat(auto-fit, minmax(10px, 30px)) / repeat(2, 1fr);
     gap: 30px;
     grid-template-areas: "tl tr"
     "bl br";
+    position: relative;
+    box-shadow: 2px 5px 5px 0.1px rgba(0, 0, 0, 0.233);
 }
 
 #search {
     border-radius: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.404);
-    background-color: rgb(218, 212, 212);
+    border: 1px solid transparent;
+    background-color: lightgray;
 }
 
 #tl {
@@ -74,5 +77,41 @@ body {
 #dash {
     grid-area: dash;
     display: grid;
-    grid-template: repeat(2, 1fr) / 2fr 1fr;
+    grid-template: 1fr / 2fr 1fr;
+    grid-template-areas: "projects announce"
+    "projects trending";
+    background-color: rgb(238, 230, 230);
+}
+
+#projects {
+    display: flex;
+    grid-area: projects;
+    gap: 20px;
+    padding: 10px;
+    flex-direction: column;
+}
+
+#cells {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    flex-grow: 1;
+    align-items: center;
+}
+
+#announce {
+    display: grid;
+    grid-area: announce;
+}
+
+#trending {
+    display: grid;
+    grid-area: trending;
+}
+
+.proj-cell {
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 40%;
+    width: 40%;
 }
