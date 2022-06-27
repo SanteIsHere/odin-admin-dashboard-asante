@@ -1,5 +1,8 @@
 :root {
     --nav-color: red;
+    --card-color: white;
+    --card-border-rad: 10px;
+    font-family: "Roboto";
 }
 
 body {
@@ -21,8 +24,6 @@ body {
     padding: 0px 0px 150px 30px;
     flex-direction: column;
     gap: 10px;
-    height: 100%;
-    /* grid-template-rows: repeat(3, 1fr); */
 }
 
 #nav * {
@@ -77,41 +78,64 @@ body {
 #dash {
     grid-area: dash;
     display: grid;
-    grid-template: 1fr / 2fr 1fr;
+    grid-template: repeat(2, 1fr) / 3fr 1fr;
     grid-template-areas: "projects announce"
     "projects trending";
     background-color: rgb(238, 230, 230);
+    grid-row: span;
+    padding: 20px;
+    row-gap: 20px;
 }
 
 #projects {
-    display: flex;
+    display: grid;
     grid-area: projects;
-    gap: 20px;
-    padding: 10px;
     flex-direction: column;
-}
-
-#cells {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    flex-grow: 1;
-    align-items: center;
+    grid-template: auto repeat(3, 3fr) / repeat(2, 1fr);
+    grid-template-areas: "proj-head ."
+    "proj1 proj2"
+    "proj3 proj4"
+    "proj5 proj6";
+    gap: 10px;
 }
 
 #announce {
     display: grid;
     grid-area: announce;
+    grid-template: auto 1fr / 1fr;
+    grid-template-areas: "announce-head"
+    "announcements";
+    gap: 10px;
+}
+
+#announcements {
+    display: flex;
+    grid-area: announcements;
+}
+
+#trending-content {
+    display: flex;
+    grid-area: trending-cont;
 }
 
 #trending {
     display: grid;
     grid-area: trending;
+    grid-template: auto 1fr / 1fr;
+    grid-template-areas: "trend-head"
+    "trending-cont";
+    gap: 10px;
 }
 
-.proj-cell {
-    border: 1px solid black;
-    border-radius: 10px;
-    height: 40%;
-    width: 40%;
+/* Target cards within "projects" section */
+.project {
+    width: 90%;
+    height: 90%;
+}
+
+/* Target all card divs */
+.card {
+    border-radius: var(--card-border-rad);
+    background-color: var(--card-color);
+    box-shadow: 2px 5px 5px 0.1px rgba(0, 0, 0, 0.233);
 }
