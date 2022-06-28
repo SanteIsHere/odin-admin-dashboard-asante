@@ -5,36 +5,55 @@
     <meta http-equiv="X-UA-Compatible" dash="IE=edge">
     <meta name="viewport" dash="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     <div id="container">
         <div id="nav">
             <div id="first-row">
-                <h2><img src="#" id="tl">Dashboard</h2>
+                <h2 class="nav-item">
+                    <span class="material-icons">dashboard</span>
+                    Dashboard
+                </h2>
             </div>
             <div id="middle-row">
-                <h3><img src="#" id="tl">Home</h3>
-                <h3><img src="#" id="tl">Profile</h3>
-                <h3><img src="#" id="tl">Messages</h3>
-                <h3><img src="#" id="tl">History</h3>
-                <h3><img src="#" id="tl">Tasks</h3>
-                <h3><img src="#" id="tl">Communities</h3>
+                <h3 class="nav-item"><span class="material-icons">home</span>Home</h3>
+                <h3 class="nav-item"><span class="material-icons">person</span>Profile</h3>
+                <h3 class="nav-item"><span class="material-icons">messages</span>Messages</h3>
+                <h3 class="nav-item"><span class="material-icons">history</span>History</h3>
+                <h3 class="nav-item"><span class="material-icons">tasks</span>Tasks</h3>
+                <h3 class="nav-item"><span class="material-icons">forum</span>Communities</h3>
             </div>
             <div id="last-row">
-                <h3><img src="#" id="tl">Settings</h3>
-                <h3><img src="#" id="tl">Support</h3>
-                <h3><img src="#" id="tl">Privacy</h3>
+                <h3 class="nav-item"><span class="material-icons">settings</span>Settings</h3>
+                <h3 class="nav-item"><span class="material-icons">support</span>Support</h3>
+                <h3 class="nav-item"><span class="material-icons">security</span>Privacy</h3>
             </div>
         </div>
         <div id="head">
-            <div class="info">
-                <img src="#" id="tl">
+            <div class="header-item" id="search-cont">
+                <span class="material-icons">search</span>
                 <input type="text" id="search" size="80">
             </div>
-            <div class="info" id="tr">PLACEHOLDER</div>
-            <div class="info" id="bl">PLACEHOLDER</div>
-            <div class="info" id="br">PLACEHOLDER</div>
+            <div class="header-item" id="user-noti">
+                <img src="#">
+                <img src="#">
+                <p id="name">Asante Frye</p>
+            </div>
+            <div class="header-item" id="user-greet">
+                <img src="#" id="greet-img">
+                <span>
+                    <p id="greeting">Hello there,</p>
+                    <h3 id="username">Asante Frye (@Sante)</p>
+                </span>
+            </div>
+            <div class="header-item" id="header-buttons">
+                <button id="new" class="header-button">New</button>
+                <button id="upload" class="header-button">Upload</button>
+                <button id="share" class="header-button">Share</button>
+            </div>
         </div>
         <div id="dash">
             <div id="projects">
