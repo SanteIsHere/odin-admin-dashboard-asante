@@ -56,6 +56,7 @@ body {
     border-radius: 20px;
     border: 1px solid transparent;
     background-color: var(--dashboard-color);
+    height: 30px;
 }
 
 #search-cont {
@@ -66,8 +67,6 @@ body {
     grid-area: user-noti;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 0;
 }
 
 #prof-img-small {
@@ -113,6 +112,7 @@ body {
 .header-item {
     display: flex;
     gap: 25px;
+    align-items: center;
 }
 
 .prof-img {
