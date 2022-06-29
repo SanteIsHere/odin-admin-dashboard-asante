@@ -21,9 +21,9 @@
             <div id="middle-row">
                 <h3 class="nav-item"><span class="material-icons">home</span>Home</h3>
                 <h3 class="nav-item"><span class="material-icons">person</span>Profile</h3>
-                <h3 class="nav-item"><span class="material-icons">messages</span>Messages</h3>
+                <h3 class="nav-item"><span class="material-icons">chat</span>Messages</h3>
                 <h3 class="nav-item"><span class="material-icons">history</span>History</h3>
-                <h3 class="nav-item"><span class="material-icons">tasks</span>Tasks</h3>
+                <h3 class="nav-item"><span class="material-icons">task</span>Tasks</h3>
                 <h3 class="nav-item"><span class="material-icons">forum</span>Communities</h3>
             </div>
             <div id="last-row">
@@ -38,16 +38,13 @@
                 <input type="text" id="search" size="80">
             </div>
             <div class="header-item" id="user-noti">
-                <img src="#">
-                <img src="#">
-                <p id="name">Asante Frye</p>
+                <span class="material-icons">notifications_active</span>
+                <img src="assets/Sante_NoBlur_Prof.png" id="prof-img-small" class="prof-img">
+                <h3 id="name">Asante Frye</h3>
             </div>
-            <div class="header-item" id="user-greet">
-                <img src="#" id="greet-img">
-                <span>
-                    <p id="greeting">Hello there,</p>
-                    <h3 id="username">Asante Frye (@Sante)</p>
-                </span>
+            <div class="header-item" id="user-greet">            
+                <img src="assets/Sante_NoBlur_Prof.png" id="greet-img" class="prof-img">
+                <p id="greeting">Hello there,<br><span id="username">Asante Frye (@Sante)</span></p>
             </div>
             <div class="header-item" id="header-buttons">
                 <button id="new" class="header-button">New</button>
@@ -57,7 +54,7 @@
         </div>
         <div id="dash">
             <div id="projects">
-                <div id="proj-head">Projects</div>
+                <div class="section-head">Projects</div>
                 <div id="proj1" class="project card" style="grid-area: proj1"></div>
                 <div id="proj2" class="project card" style="grid-area: proj2"></div>
                 <div id="proj3" class="project card" style="grid-area: proj3"></div>
@@ -66,11 +63,11 @@
                 <div id="proj6" class="project card" style="grid-area: proj6"></div>
             </div>
             <div id="announce">
-                <div id="announce-head">Announcements</div>
+                <div class="section-head">Announcements</div>
                 <div id="announcements" class="card"></div>
             </div>
             <div id="trending">
-                <div id="trend-head">Trending</div>
+                <div class="section-head">Trending</div>
                 <div id="trending-content" class="card"></div>
             </div>
         </div>
