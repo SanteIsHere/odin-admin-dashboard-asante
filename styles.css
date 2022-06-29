@@ -17,8 +17,9 @@ body {
 
 #container {
     display: grid;
-    grid-template: 1fr 3fr / 1fr 3fr;
+    grid-template: 1fr 3fr 1fr / 1fr 3fr;
     grid-template-areas: "nav head"
+    "nav dash"
     "nav dash";
 }
 
@@ -26,7 +27,7 @@ body {
     background-color: var(--nav-color);
     grid-area: nav;
     display: flex;
-    padding: 0px 0px 150px 30px;
+    padding-left: 20px;
     flex-direction: column;
     gap: 10px;
 }
@@ -41,13 +42,13 @@ body {
 #head {
     grid-area: head;
     display: grid;
-    padding: 15px 40px;
+    padding: 15px 25px;
     grid-template: 30px 1fr / 1fr minmax(350px, 1fr);
-    gap: 30px;
+    gap: 15px;
     grid-template-areas: "search-cont user-noti"
     "user-greet header-buttons";
     position: relative;
-    box-shadow: 2px 5px 5px 0.1px var(--box-shadow-col);
+    box-shadow: 2px 2px 5px 0.1px var(--box-shadow-col);
     background-color: white;
 }
 
@@ -80,7 +81,8 @@ body {
 }
 
 #greet-img {
-    width: 85px;
+    width: 12%;
+    height: 85%;
 }
 
 #greeting {
@@ -95,17 +97,17 @@ body {
     grid-area: header-buttons;
     justify-content: center;
     align-items: center;
-    padding-top: 40px;
 }
 
 .header-button {
     width: 90px;
-    height: 80%;
+    height: 40%;
     background-color: var(--button-color);
     border: none;
     color: var(--text-color);
     border-radius: 20px;
     font-weight: bold;
+    font-size: 15px;
 }
 
 .header-item {
@@ -124,8 +126,7 @@ body {
     grid-template-areas: "projects announce"
     "projects trending";
     background-color: var(--dashboard-color);
-    grid-row: span;
-    padding: 20px;
+    padding: 40px 20px 40px 20px;
     row-gap: 20px;
 }
 
@@ -183,5 +184,5 @@ body {
 .card {
     border-radius: var(--card-border-rad);
     background-color: var(--card-color);
-    box-shadow: 2px 5px 5px 0.1px var(--box-shadow-col);
+    box-shadow: 2px 4px 5px 0.1px var(--box-shadow-col);
 }
