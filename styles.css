@@ -173,7 +173,9 @@ body {
 /* Target cards within "projects" section */
 .project {
     width: 90%;
-    height: 90%;
+    border-left-color: orange;
+    border-left-width: 10px;
+    border-left-style: solid;
 }
 
 .section-head {
