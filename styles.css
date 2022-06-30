@@ -153,18 +153,31 @@ body {
 
 #ann-card {
     grid-area: ann-card;
-    padding: 20px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
 }
 
 hr {
     width: 100%;
+    opacity: 20%;
 }
 
-#trending-content {
+#trending-card {
     display: flex;
-    grid-area: trending-cont;
+    flex-direction: column;
+    grid-area: trending-card;
+    gap: 10px;
+}
+
+.trending-user {
+    display: flex;
+    gap: 10px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
 }
 
 #trending {
@@ -172,7 +185,7 @@ hr {
     grid-area: trending;
     grid-template: auto 1fr / 1fr;
     grid-template-areas: "trend-head"
-    "trending-cont";
+    "trending-card";
     gap: 10px;
 }
 
