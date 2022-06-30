@@ -147,13 +147,19 @@ body {
     grid-area: announce;
     grid-template: auto 1fr / 1fr;
     grid-template-areas: "announce-head"
-    "announcements";
+    "ann-card";
     gap: 10px;
 }
 
-#announcements {
+#ann-card {
+    grid-area: ann-card;
+    padding: 20px;
     display: flex;
-    grid-area: announcements;
+    flex-direction: column;
+}
+
+hr {
+    width: 100%;
 }
 
 #trending-content {
@@ -179,7 +185,8 @@ body {
 }
 
 .section-head {
-    font-weight: bold;
+    font-weight: 400;
+    font-size: large;
 }
 
 /* Target all card divs */
