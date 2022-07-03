@@ -19,9 +19,8 @@ body {
 
 #container {
     display: grid;
-    grid-template: 1fr 3fr 3fr / 1fr 3fr;
+    grid-template: 1fr / 1fr 3fr;
     grid-template-areas: "nav head"
-    "nav dash"
     "nav dash";
 }
 
@@ -124,7 +123,7 @@ body {
 #dash {
     grid-area: dash;
     display: grid;
-    grid-template: repeat(2, auto) / 3fr 1fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-areas: "project-cont announce"
     "project-cont trending";
     background-color: var(--dashboard-color);
@@ -132,28 +131,41 @@ body {
     gap: 30px;
 }
 
+/* Projects - Start  */
+
 #project-cont {
     grid-area: project-cont;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
 }
 
 #projects {
-    display: grid;
+    display: flex;
     grid-area: projects;
-    grid-template-columns: repeat(2, 1fr);
-    /* grid-auto-rows: minmax(min-content, max-content); */
-    grid-template-areas: "proj-head ."
-    "proj1 proj2"
-    "proj3 proj4"
-    "proj5 proj6";
-    gap: 10px;
-    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
+/* Target cards within "projects" section */
+.project {
+    border-left-color: orange;
+    border-left-width: 10px;
+    border-left-style: solid;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 50px;
+}
+
+/* Projects - End */
+
+/* Announcements - Start */
+
 #announce {
-    display: grid;
+    display: flex;
     grid-area: announce;
-    grid-template-areas: "announce-head"
-    "ann-card";
+    flex-direction: column;
     gap: 10px;
 }
 
@@ -176,6 +188,21 @@ body {
 hr {
     width: 100%;
     opacity: 20%;
+}
+
+/* Announcements - End */
+
+/* Trending - Start */
+
+#trending {
+    display: flex;
+    grid-area: trending;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#trending-card {
+    padding: 20px;
 }
 
 #trending-card {
@@ -204,29 +231,7 @@ hr {
     width: 30%;
 }
 
-#trending {
-    display: grid;
-    grid-area: trending;
-    grid-template-areas: "trend-head"
-    "trending-card";
-    gap: 10px;
-}
-
-#trending-card {
-    padding: 20px;
-}
-
-/* Target cards within "projects" section */
-.project {
-    border-left-color: orange;
-    border-left-width: 10px;
-    border-left-style: solid;
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    gap: 50px;
-}
-
+/* Trending - End */
 .icons {
     display: flex;
     justify-content: flex-end;
@@ -244,3 +249,4 @@ hr {
     background-color: var(--card-color);
     box-shadow: 2px 4px 5px 0.1px var(--box-shadow-col);
 }
+
