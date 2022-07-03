@@ -24,6 +24,8 @@ body {
     "nav dash";
 }
 
+ /* Nav - Start */
+
 #nav {
     background-color: var(--nav-color);
     grid-area: nav;
@@ -39,6 +41,10 @@ body {
     color: var(--text-color);
     align-items: center;
 }
+
+/* Nav - End */
+
+/* Header - Start */
 
 #head {
     grid-area: head;
@@ -120,6 +126,9 @@ body {
     border-radius: var(--prof-user-img-rad);
 }
 
+/* Header - End */
+
+/* Grid to contain Projects, Announcements, and Trending cells */
 #dash {
     grid-area: dash;
     display: grid;
@@ -144,7 +153,7 @@ body {
     display: flex;
     grid-area: projects;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 15px;
 }
 
 /* Target cards within "projects" section */
@@ -155,7 +164,13 @@ body {
     display: flex;
     flex-direction: column;
     padding: 15px;
-    gap: 50px;
+    flex: 1 0 30%;
+}
+
+.icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
 }
 
 /* Projects - End */
@@ -169,18 +184,18 @@ body {
     gap: 10px;
 }
 
-#ann-card {
-    grid-area: ann-card;
+#announcements {
+    grid-area: announcements;
     padding: 30px;
     display: flex;
     flex-direction: column;
 }
 
-#ann-card .header {
+#announcements .header {
     font-weight: bolder;
 }
 
-#ann-card .text {
+#announcements .text {
     font-weight: lighter;
     color: var(--announcement-text)
 }
@@ -232,12 +247,8 @@ hr {
 }
 
 /* Trending - End */
-.icons {
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-}
 
+/* Headers for each section: Projects, Announcements, and Trending */
 .section-head {
     font-weight: 400;
     font-size: large;
