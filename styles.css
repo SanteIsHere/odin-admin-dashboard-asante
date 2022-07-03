@@ -144,16 +144,15 @@ body {
 
 #project-cont {
     grid-area: project-cont;
-    gap: 5px;
+    gap: 10px;
     display: flex;
     flex-direction: column;
 }
 
 #projects {
     display: flex;
-    grid-area: projects;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 25px;
 }
 
 /* Target cards within "projects" section */
@@ -164,13 +163,18 @@ body {
     display: flex;
     flex-direction: column;
     padding: 15px;
-    flex: 1 0 30%;
+    flex: 1 1 30%;
+    height: fit-content;
 }
 
 .icons {
     display: flex;
     justify-content: flex-end;
     gap: 15px;
+}
+
+.title {
+    font-weight: bolder;
 }
 
 /* Projects - End */
@@ -185,7 +189,6 @@ body {
 }
 
 #announcements {
-    grid-area: announcements;
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -217,14 +220,9 @@ hr {
 }
 
 #trending-card {
-    padding: 20px;
-}
-
-#trending-card {
     display: flex;
     flex-direction: column;
-    grid-area: trending-card;
-    gap: 10px;
+    padding: 15px;
 }
 
 .trending-user {
